@@ -16,7 +16,7 @@ function authMiddleware(req, res, next) {
 				throw new Error();
 			}
 
-			req.userID = decoded.id;
+			req.userId = decoded.id;
 			req.userName = decoded.name;
 		});
 	} catch (err) {
