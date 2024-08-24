@@ -41,7 +41,7 @@ class CategoryController {
 		return res.status(201).json({ id, name });
 	}
 
-	async updat(req, res) {
+	async update(req, res) {
 		const schema = Yup.object({
 			name: Yup.string(),
 		});
