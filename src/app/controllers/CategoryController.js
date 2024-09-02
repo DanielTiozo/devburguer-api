@@ -30,7 +30,7 @@ class CategoryController {
 		});
 
 		if (categoryExist) {
-			return res.status(400).json({ error: 'Category exists!' });
+			return res.status(400).json({ error: 'Category already exists!' });
 		}
 
 		const { id } = await Category.create({
@@ -80,7 +80,7 @@ class CategoryController {
 				},
 			});
 
-			if (categoryNameExist && categoryNameExist.id != +id) {
+			if (categoryNameExist && categoryNameExist.id != id) {
 				return res.status(400).json({ error: 'Category exists!' });
 			}
 		}
