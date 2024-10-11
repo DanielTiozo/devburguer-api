@@ -17,6 +17,10 @@ class Database {
 
 	init() {
 		this.connection = new Sequelize(configDatabase);
+		// this.connection = new Sequelize(
+		// 	'postgresql://postgres:dnXplnXJGjKxDfaYdtQvIrHdXBNKPsSx@junction.proxy.rlwy.net:39367/railway',
+		// );
+
 		models
 			.map((model) => model.init(this.connection))
 			.map((model) => model.associate && model.associate(this.connection.models));

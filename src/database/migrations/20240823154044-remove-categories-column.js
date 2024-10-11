@@ -11,5 +11,6 @@ module.exports = {
 			type: Sequelize.STRING,
 			allowNull: true,
 		});
+		// await queryInterface.addColumn('products', 'category', Sequelize.STRING);
 	},
 };
