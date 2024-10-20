@@ -16,10 +16,10 @@ class Database {
 	}
 
 	init() {
-		this.connection = new Sequelize(configDatabase);
-		// this.connection = new Sequelize(
-		// 	'postgresql://postgres:dnXplnXJGjKxDfaYdtQvIrHdXBNKPsSx@junction.proxy.rlwy.net:39367/railway',
-		// );
+		// this.connection = new Sequelize(configDatabase);
+		this.connection = new Sequelize(
+			'postgresql://postgres:UPoZgquCscsybfNlzxeDFdFQKsFXmPea@junction.proxy.rlwy.net:49776/railway',
+		);
 
 		models
 			.map((model) => model.init(this.connection))
@@ -27,7 +27,10 @@ class Database {
 	}
 
 	mongo() {
-		this.mongoConnection = mongoose.connect('mongodb://localhost:27017/devburguer');
+		// this.mongoConnection = mongoose.connect('mongodb://localhost:27017/devburguer');
+		this.mongoConnection = mongoose.connect(
+			'mongodb://mongo:rFyFRWQzCSFyyLFyvRuKxFHnWGNnxdJr@junction.proxy.rlwy.net:29905',
+		);
 	}
 }
 

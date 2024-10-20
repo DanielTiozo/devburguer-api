@@ -88,7 +88,7 @@ class ProductController {
 			},
 		);
 
-		return res.status(200);
+		return res.status(200).json();
 	}
 
 	async index(req, res) {
