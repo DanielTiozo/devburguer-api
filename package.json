@@ -11,6 +11,7 @@
 		"name": "Daniel Tiozo",
 		"url": "https://github.com/DanielTiozo"
 	},
+	"type": "module",
 	"license": "ISC",
 	"description": "DevBurguer API",
 	"dependencies": {
