@@ -1,10 +1,6 @@
 import { v4 } from 'uuid';
 
-<<<<<<< HEAD
 import User from '../models/User';
-=======
-import User from '../models/User.js';
->>>>>>> 767ebb1665e947fcd691d3a02b2dd18d203f277c
 import * as Yup from 'yup';
 
 class UserController {
