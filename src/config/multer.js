@@ -2,6 +2,7 @@ import multer from 'multer';
 import { v4 } from 'uuid';
 
 // import { extname, resolve } from 'node:path';
+import { extname } from 'node:path';
 
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
