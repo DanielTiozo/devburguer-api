@@ -1,22 +1,22 @@
 import { Router } from 'express';
 import multer from 'multer';
-import multerConfig from './config/multer.js';
-import authMiddleware from './app/midlewares/auth.js';
+import multerConfig from './config/multer';
+import authMiddleware from './app/midlewares/auth';
 
-import UserController from './app/controllers/UserController.js';
-import SessionController from './app/controllers/SessionController.js';
-import ProductController from './app/controllers/ProductController.js';
-import CategoryController from './app/controllers/CategoryController.js';
-import OrderController from './app/controllers/OrderController.js';
-import CreatePaymentIntentController from './app/controllers/stripe/CreatePaymentIntentController.js';
+import UserController from './app/controllers/UserController';
+import SessionController from './app/controllers/SessionController';
+import ProductController from './app/controllers/ProductController';
+import CategoryController from './app/controllers/CategoryController';
+import OrderController from './app/controllers/OrderController';
+import CreatePaymentIntentController from './app/controllers/stripe/CreatePaymentIntentController';
 
 const routes = new Router();
 
 const upload = multer(multerConfig);
 
-routes.get('/', (req, res) => {
-	return res.json({ message: 'Acessou a API' });
-});
+// routes.get('/', (req, res) => {
+// 	return res.json({ message: 'Acessou a API' });
+// });
 
 routes.post('/users', UserController.store);
 routes.post('/session', SessionController.store);

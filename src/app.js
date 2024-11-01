@@ -3,9 +3,9 @@ import express from 'express';
 import { resolve } from 'node:path';
 import cors from 'cors';
 
-import routes from './routes.js';
+import routes from './routes';
 
-import './database/index.js';
+import './database/index';
 
 class App {
 	constructor() {
